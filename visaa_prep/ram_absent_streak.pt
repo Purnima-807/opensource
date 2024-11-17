@@ -1,0 +1,11 @@
+n = int(input())
+att = list(map(int,input().split()))
+absent = 0
+curr_absent = 0
+for day in att:
+    if day == 0:
+        curr_absent += 1
+        absent=max(absent,curr_absent)
+    else:
+        curr_absent = 0
+print(absent)
